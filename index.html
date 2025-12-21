@@ -22,9 +22,7 @@
             --border: #e3e8f0;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -56,21 +54,14 @@
             opacity: 0.95;
         }
 
-        .hero .btn {
-            background: #fff;
-            color: var(--navy);
-        }
-
         /* CONTAINER */
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 70px 20px;
         }
 
-        section.alt {
-            background: var(--alt-bg);
-        }
+        section.alt { background: var(--alt-bg); }
 
         section h2 {
             font-size: 26px;
@@ -87,6 +78,7 @@
             padding: 34px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 100%;
         }
 
         .card:hover {
@@ -101,31 +93,38 @@
 
         .card p {
             color: var(--muted);
-            text-align: justify;
+            margin-bottom: 14px;
         }
 
         /* PROJECT GRID */
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 32px;
         }
 
-        /* PILLS */
-        .pill-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 22px 0 26px;
+        @media (max-width: 1024px) {
+            .project-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
-        .pill {
-            background: #f1f4fb;
-            color: #344a7a;
-            padding: 8px 14px;
-            border-radius: 10px;
-            font-size: 13px;
+        @media (max-width: 640px) {
+            .project-grid { grid-template-columns: 1fr; }
+        }
+
+        .tech {
             font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        ul.features {
+            padding-left: 18px;
+            margin: 0 0 22px;
+            color: var(--muted);
+        }
+
+        ul.features li {
+            margin-bottom: 6px;
         }
 
         /* BUTTONS */
@@ -139,48 +138,30 @@
             font-weight: 600;
             text-decoration: none;
             margin-right: 10px;
-            margin-bottom: 8px;
         }
 
-        /* SKILLS */
+        /* SKILLS GRID — FORCED 3x3 */
         .skills {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        @media (max-width: 900px) {
+            .skills { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .skills { grid-template-columns: 1fr; }
         }
 
         .skill {
             background: var(--card);
-            padding: 18px 20px;
+            padding: 20px;
             border-radius: 14px;
             border: 1px solid var(--border);
-            font-size: 14px;
             font-weight: 600;
             color: #344a7a;
-        }
-
-        /* CERTS */
-        .cert-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .cert-item {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 18px 22px;
-            margin-bottom: 14px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .cert-item a {
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: none;
         }
 
         /* FOOTER */
@@ -211,20 +192,6 @@
         KPI frameworks, SLA performance tracking, and executive reporting.
     </p>
     <a class="btn" href="#projects">View Projects</a>
-    <a class="btn" href="https://www.linkedin.com/in/ronit-kaushal-a40609177/" target="_blank">LinkedIn</a>
-</section>
-
-<!-- ABOUT -->
-<section class="container">
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            Quality-driven Data Analytics and Business Intelligence professional with leadership-level
-            experience in delivering KPI frameworks, SLA performance tracking, and executive dashboards.
-            Proficient in SQL, Power BI, and analytical reporting, enabling data-driven decision-making,
-            improved operational efficiency, and strong stakeholder alignment across enterprise environments.
-        </p>
-    </div>
 </section>
 
 <!-- PROJECTS -->
@@ -233,64 +200,58 @@
 
     <div class="project-grid">
 
+        <!-- Project 1 -->
         <div class="card">
-            <h3>Staffing Analytics & SLA Performance Dashboard</h3>
+            <h3>Staffing Analytics Dashboard</h3>
             <p>
-                An end-to-end analytics dashboard designed to monitor recruitment funnel performance,
-                SLA adherence, and hiring efficiency through interactive, drill-through reporting.
+                End-to-end recruitment analytics dashboard enabling leadership to track funnel
+                performance, SLA adherence, and hiring efficiency through interactive and
+                drill-through insights.
             </p>
-
-            <div class="pill-group">
-                <div class="pill">Power BI · DAX · Power Query</div>
-                <div class="pill">KPI & SLA Frameworks</div>
-                <div class="pill">Recruitment Funnel Analytics</div>
-            </div>
-
-            <a class="btn" href="https://app.powerbi.com/view?r=eyJrIjoiNDI0MjVkMzAtNjBmZi00ZDY3LThlYWEtNzY3ZWE0NThmN2M2IiwidCI6ImNlOTk3M2JmLTc4NDMtNDM2Zi1hYmZkLTk2MGQ0OTM1MTcxNiJ9" target="_blank">
-                Live Dashboard
-            </a>
-            <a class="btn" href="Staffing_Analytics_Dashboard.pdf" target="_blank">
-                PDF
-            </a>
+            <div class="tech">Power BI · DAX · Power Query</div>
+            <ul class="features">
+                <li>KPI & SLA Framework Design</li>
+                <li>Recruitment Funnel Performance Analytics</li>
+                <li>Drill-through & Trend Analysis</li>
+                <li>Operational & Leadership Reporting</li>
+            </ul>
+            <a class="btn" href="https://app.powerbi.com/view?r=eyJrIjoiNDI0MjVkMzAtNjBmZi00ZDY3LThlYWEtNzY3ZWE0NThmN2M2IiwidCI6ImNlOTk3M2JmLTc4NDMtNDM2Zi1hYmZkLTk2MGQ0OTM1MTcxNiJ9" target="_blank">Live Dashboard</a>
+            <a class="btn" href="Staffing_Analytics_Dashboard.pdf" target="_blank">PDF</a>
         </div>
 
+        <!-- Project 2 -->
         <div class="card">
             <h3>Supplier Scorecard Dashboard</h3>
             <p>
-                Executive-level supplier performance scorecard evaluating response rates,
-                quality metrics, SLA adherence, and vendor market share.
+                Executive-ready supplier performance scorecard providing visibility into response rates,
+                quality metrics, SLA compliance, and vendor market share for data-driven governance.
             </p>
-
-            <div class="pill-group">
-                <div class="pill">Power BI · DAX</div>
-                <div class="pill">KPI Scoring</div>
-                <div class="pill">Executive Scorecard</div>
-            </div>
-
-            <a class="btn" href="https://app.powerbi.com/view?r=eyJrIjoiZmMxMTFhNzEtYTkxYS00N2M5LWFkZTEtZTMyYzc4ZTI2NTQ3IiwidCI6ImNlOTk3M2JmLTc4NDMtNDM2Zi1hYmZkLTk2MGQ0OTM1MTcxNiJ9" target="_blank">
-                Live Dashboard
-            </a>
-            <a class="btn" href="Supplier_Scorecard_Dashboard.pdf" target="_blank">
-                PDF
-            </a>
+            <div class="tech">Power BI · DAX · Power Query</div>
+            <ul class="features">
+                <li>KPI & SLA Scoring Framework</li>
+                <li>Supplier Performance Analytics</li>
+                <li>Scorecard & Benchmarking Design</li>
+                <li>Executive & Leadership Reporting</li>
+            </ul>
+            <a class="btn" href="https://app.powerbi.com/view?r=eyJrIjoiZmMxMTFhNzEtYTkxYS00N2M5LWFkZTEtZTMyYzc4ZTI2NTQ3IiwidCI6ImNlOTk3M2JmLTc4NDMtNDM2Zi1hYmZkLTk2MGQ0OTM1MTcxNiJ9" target="_blank">Live Dashboard</a>
+            <a class="btn" href="Supplier_Scorecard_Dashboard.pdf" target="_blank">PDF</a>
         </div>
 
+        <!-- Project 3 -->
         <div class="card">
-            <h3>Workforce Analytics — SQL Project</h3>
+            <h3>Workforce Analytics - SQL Project</h3>
             <p>
-                End-to-end workforce analytics project using PostgreSQL, covering schema design,
-                synthetic data generation, validation, and operational analysis.
+                End-to-end workforce analytics project built on PostgreSQL, covering schema design,
+                synthetic data generation, data validation, and operational analysis.
             </p>
-
-            <div class="pill-group">
-                <div class="pill">PostgreSQL · SQL</div>
-                <div class="pill">Data Modeling</div>
-                <div class="pill">Analytics Queries</div>
-            </div>
-
-            <a class="btn" href="https://github.com/ronit-kaushal/workforce-analytics-sql" target="_blank">
-                GitHub Repository
-            </a>
+            <div class="tech">PostgreSQL · SQL · Data Modeling</div>
+            <ul class="features">
+                <li>Workforce Data Model Design</li>
+                <li>Synthetic Data Generation & Validation</li>
+                <li>Workforce Metrics & Analytics Queries</li>
+                <li>Operational & Analytical Reporting</li>
+            </ul>
+            <a class="btn" href="https://github.com/ronit-kaushal/workforce-analytics-sql" target="_blank">GitHub Repository</a>
         </div>
 
     </div>
@@ -307,21 +268,6 @@
         <div class="skill">Stakeholder Reporting & Insights</div>
         <div class="skill">Business & Operational Analytics</div>
     </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="container alt">
-    <h2>Certifications</h2>
-    <ul class="cert-list">
-        <li class="cert-item">
-            <span>HackerRank – SQL (Basic)</span>
-            <a href="https://www.hackerrank.com/certificates/82902e422855" target="_blank">View Certificate →</a>
-        </li>
-        <li class="cert-item">
-            <span>HackerRank – SQL (Intermediate)</span>
-            <a href="https://www.hackerrank.com/certificates/469453bc49c3" target="_blank">View Certificate →</a>
-        </li>
-    </ul>
 </section>
 
 <!-- FOOTER -->
