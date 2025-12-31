@@ -40,32 +40,17 @@
             text-align: center;
         }
 
-        .hero img {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 18px;
-            border: 3px solid rgba(255,255,255,0.5);
-        }
-
         .hero h1 {
             font-size: 42px;
-            margin: 0 0 10px;
+            margin: 0 0 12px;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        .hero .cert-title {
-            font-weight: 700;
-            font-size: 17px;
-            margin-bottom: 6px;
-        }
-
         .hero p {
             max-width: 760px;
-            margin: 0 auto 26px;
-            font-size: 15.5px;
+            margin: 0 auto 30px;
+            font-size: 16px;
             opacity: 0.95;
         }
 
@@ -75,6 +60,11 @@
         }
 
         /* GENERAL */
+        #projects {
+            padding-top: 30px;
+            padding-bottom: 46px;
+        }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -100,6 +90,15 @@
             margin-bottom: 28px;
         }
 
+        .card h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
         .tech {
             font-weight: 600;
             color: var(--navy);
@@ -110,6 +109,10 @@
             padding-left: 18px;
             margin: 0 0 22px;
             color: var(--muted);
+        }
+
+        ul.features li {
+            margin-bottom: 6px;
         }
 
         /* BUTTON */
@@ -132,6 +135,14 @@
             gap: 22px;
         }
 
+        @media (max-width: 900px) {
+            .skills { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .skills { grid-template-columns: 1fr; }
+        }
+
         .skill {
             background: var(--card);
             padding: 20px;
@@ -141,20 +152,42 @@
             color: #344a7a;
         }
 
-        /* CERTIFICATION BADGE */
-        .pl300 {
+        /* CERTIFICATIONS */
+        .cert-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cert-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 18px 22px;
+            margin-bottom: 14px;
             display: flex;
-            gap: 28px;
+            justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
 
-        .pl300 img.badge {
-            width: 130px;
+        .cert-item a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
         }
 
-        .pl300 img.qr {
-            width: 95px;
+        .cert-pl300 {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .cert-pl300 img {
+            height: 56px;
+        }
+
+        .qr {
+            height: 56px;
         }
 
         /* FOOTER */
@@ -168,8 +201,8 @@
 
         .footer a {
             color: var(--primary);
-            font-weight: 600;
             text-decoration: none;
+            font-weight: 600;
             margin: 0 6px;
         }
     </style>
@@ -179,10 +212,9 @@
 
 <!-- HERO -->
 <section class="hero">
-    <img src="assets/images/profile.jpg" alt="Ronit Kaushal">
     <h1>Ronit Kaushal</h1>
-    <div class="cert-title">Microsoft Certified: Power BI Data Analyst Associate</div>
     <p>
+        <strong>Microsoft Certified: Power BI Data Analyst Associate</strong><br>
         Data Analytics & Business Intelligence professional specializing in SQL, Power BI,
         KPI frameworks, SLA performance tracking, and executive reporting.
     </p>
@@ -194,10 +226,11 @@
     <h2>About Me</h2>
     <div class="card">
         <p>
-            Microsoft Certified: Power BI Data Analyst Associate (PL-300) with a strong focus on quality-driven data analytics and business intelligence.
-            Experienced in building KPI frameworks, SLA performance tracking, and executive-level dashboards.
-            Proficient in SQL and Power BI, enabling data-driven decision-making, improved operational efficiency,
-            and strong stakeholder alignment across enterprise environments.
+            Microsoft Certified: Power BI Data Analyst Associate (PL-300) with a strong focus on
+            quality-driven data analytics and business intelligence. Experienced in building KPI
+            frameworks, SLA performance tracking, and executive-level dashboards. Proficient in SQL
+            and Power BI, enabling data-driven decision-making, improved operational efficiency, and
+            strong stakeholder alignment across enterprise environments.
         </p>
     </div>
 </section>
@@ -206,10 +239,12 @@
 <section id="projects" class="container alt">
     <h2>Featured Projects</h2>
 
-    <!-- Staffing -->
     <div class="card">
         <h3>Staffing Analytics Dashboard</h3>
-        <p>End-to-end recruitment analytics dashboard enabling leadership to track funnel performance, SLA adherence, and hiring efficiency.</p>
+        <p>
+            End-to-end recruitment analytics dashboard enabling leadership to track funnel performance,
+            SLA adherence, and hiring efficiency through interactive and drill-through insights.
+        </p>
         <div class="tech">Power BI · DAX · Power Query</div>
         <ul class="features">
             <li>KPI & SLA Framework Design</li>
@@ -221,10 +256,12 @@
         <a class="btn" href="assets/docs/Staffing_Analytics_Dashboard.pdf" target="_blank">PDF</a>
     </div>
 
-    <!-- Supplier -->
     <div class="card">
         <h3>Supplier Scorecard Dashboard</h3>
-        <p>Executive-ready supplier performance scorecard providing visibility into response rates, quality metrics, SLA compliance, and vendor governance.</p>
+        <p>
+            Executive-ready supplier performance scorecard providing visibility into response rates,
+            quality metrics, SLA compliance, and vendor market share for data-driven governance.
+        </p>
         <div class="tech">Power BI · DAX · Power Query</div>
         <ul class="features">
             <li>KPI & SLA Scoring Framework</li>
@@ -236,10 +273,12 @@
         <a class="btn" href="assets/docs/Supplier_Scorecard_Dashboard.pdf" target="_blank">PDF</a>
     </div>
 
-    <!-- SQL -->
     <div class="card">
-        <h3>Workforce Analytics – SQL Project</h3>
-        <p>End-to-end workforce analytics project built on PostgreSQL covering schema design, data generation, validation, and analysis.</p>
+        <h3>Workforce Analytics - SQL Project</h3>
+        <p>
+            End-to-end workforce analytics project built on PostgreSQL, covering schema design,
+            synthetic data generation, data validation, and operational analysis.
+        </p>
         <div class="tech">PostgreSQL · SQL · Data Modeling</div>
         <ul class="features">
             <li>Workforce Data Model Design</li>
@@ -251,26 +290,8 @@
     </div>
 </section>
 
-<!-- PL-300 CERT -->
-<section class="container">
-    <h2>Microsoft Certification</h2>
-    <div class="card pl300">
-        <a href="https://learn.microsoft.com/en-us/users/ronit-kaushal/credentials/e599ccc4247de6a3" target="_blank">
-            <img src="assets/images/ms-pl300-badge.png" class="badge" alt="PL-300 Badge">
-        </a>
-        <div>
-            <p><strong>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</strong></p>
-            <p>
-                <a href="assets/docs/pl300-certificate.pdf" target="_blank">View Certificate (PDF)</a> ·
-                <a href="https://learn.microsoft.com/en-us/users/ronit-kaushal/credentials/e599ccc4247de6a3" target="_blank">Verify on Microsoft Learn</a>
-            </p>
-        </div>
-        <img src="assets/images/pl300-qr.png" class="qr" alt="PL-300 Verification QR">
-    </div>
-</section>
-
 <!-- SKILLS -->
-<section class="container alt">
+<section class="container">
     <h2>Core Skills</h2>
     <div class="skills">
         <div class="skill">SQL · Data Analysis & Querying</div>
@@ -280,6 +301,34 @@
         <div class="skill">Stakeholder Reporting & Insights</div>
         <div class="skill">Business & Operational Analytics</div>
     </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="container alt">
+    <h2>Certifications</h2>
+    <ul class="cert-list">
+
+        <!-- PL-300 -->
+        <li class="cert-item">
+            <div class="cert-pl300">
+                <a href="https://learn.microsoft.com/en-us/users/ronit-kaushal/credentials/e599ccc4247de6a3" target="_blank">
+                    <img src="assets/images/ms-pl300-badge.png" alt="Microsoft PL-300 Badge">
+                </a>
+                <span>Microsoft Certified: Power BI Data Analyst Associate (PL-300)</span>
+            </div>
+            <a href="assets/docs/pl300-certificate.pdf" target="_blank">View Certificate →</a>
+        </li>
+
+        <li class="cert-item">
+            <span>HackerRank - SQL (Basic)</span>
+            <a href="https://www.hackerrank.com/certificates/82902e422855" target="_blank">View Certificate →</a>
+        </li>
+
+        <li class="cert-item">
+            <span>HackerRank - SQL (Intermediate)</span>
+            <a href="https://www.hackerrank.com/certificates/469453bc49c3" target="_blank">View Certificate →</a>
+        </li>
+    </ul>
 </section>
 
 <!-- FOOTER -->
