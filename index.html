@@ -63,7 +63,7 @@
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 44px 20px 52px;
+            padding: 44px 20px;
         }
 
         section.alt { background: var(--alt-bg); }
@@ -200,9 +200,12 @@
             font-weight: 600;
             margin: 0 6px;
         }
-        .container:not(.alt) + .container.alt {
-            padding-top: 28px;
-        }   
+            section {
+            margin-bottom: 48px;
+        }
+        section:last-of-type {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 
