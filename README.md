@@ -29,16 +29,6 @@ https://github.com/ronit-kaushal/supplier-scorecard-dashboard
 
 ---
 
-### Workforce Analytics - SQL Project
-- End-to-end workforce analytics project using PostgreSQL  
-- Covers schema design, synthetic data generation, validation, and analysis  
-- Focused on operational and business analytics use cases  
-
-Repository:  
-https://github.com/ronit-kaushal/workforce-analytics-sql
-
----
-
 ### Superstore Sales Analytics (Python + SQL + Power BI)
 - End-to-end sales analytics and business intelligence project built using Python, SQL, and Power BI  
 - Data workflow: **Raw Data → Python Cleaning → SQL Analysis → Power BI Dashboard**  
@@ -46,6 +36,16 @@ https://github.com/ronit-kaushal/workforce-analytics-sql
 
 Repository:  
 https://github.com/ronit-kaushal/superstore-sales-analytics
+
+---
+
+### Workforce Analytics - SQL Project
+- End-to-end workforce analytics project using PostgreSQL  
+- Covers schema design, synthetic data generation, validation, and analysis  
+- Focused on operational and business analytics use cases  
+
+Repository:  
+https://github.com/ronit-kaushal/workforce-analytics-sql
 
 ---
 
