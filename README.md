@@ -1,16 +1,71 @@
-## Hi there 👋
+# Analytics Portfolio - Ronit Kaushal
 
-<!--
-**rohankat95/rohankat95** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Welcome to my analytics portfolio.  
+This repository serves as a **central index** for my end-to-end data analytics projects across **SQL, Python, Power BI, and business analytics**.
 
-Here are some ideas to get you started:
+Each project is maintained in its **own dedicated repository** to reflect real-world analytics workflows and version control practices.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## Featured Projects
+
+### Staffing Analytics & SLA Performance Dashboard
+- End-to-end recruitment analytics dashboard built in Power BI  
+- Focuses on SLA adherence, funnel efficiency, and operational KPIs  
+- Interactive report with slicer-driven insights and drill-through analysis  
+
+Repository:  
+https://github.com/ronit-kaushal/staffing-analytics-dashboard
+
+---
+
+### Supplier Scorecard Dashboard
+- Executive-level supplier performance scorecard  
+- KPI-based scoring, ranking, and market share analysis  
+- Designed for vendor governance and leadership reviews  
+
+Repository:  
+https://github.com/ronit-kaushal/supplier-scorecard-dashboard
+
+---
+
+### Workforce Analytics - SQL Project
+- End-to-end workforce analytics project using PostgreSQL  
+- Covers schema design, synthetic data generation, validation, and analysis  
+- Focused on operational and business analytics use cases  
+
+Repository:  
+https://github.com/ronit-kaushal/workforce-analytics-sql
+
+---
+
+### Superstore Sales Analytics (Python + SQL + Power BI)
+- End-to-end sales analytics and business intelligence project built using Python, SQL, and Power BI  
+- Data workflow: **Raw Data → Python Cleaning → SQL Analysis → Power BI Dashboard**  
+- Includes KPI reporting, discount impact insights, and **RFM-based customer segmentation**  
+
+Repository:  
+https://github.com/ronit-kaushal/superstore-sales-analytics
+
+---
+
+## Tools & Skills
+
+- **SQL (PostgreSQL)**
+- **Python**
+- **Power BI**
+- **DAX**
+- **Power Query**
+- **Data Modeling**
+- **KPI & SLA Framework Design**
+- **Business & Operational Analytics**
+
+---
+
+## About Me
+
+**Ronit Kaushal**  
+Data Analytics & Business Intelligence  
+
+Email: ronitk95@gmail.com  
+LinkedIn: https://www.linkedin.com/in/ronit-kaushal-a40609177/
