@@ -15,10 +15,7 @@ Each project is maintained in its **own dedicated repository or dashboard artifa
 - Includes peak-hour analysis, cancellation rate tracking, and drill-through to trip-level details  
 - Designed to support **operational planning, driver allocation, and demand optimization decisions**
 
-Live Dashboard (Publish to Web):  
-https://app.powerbi.com/view?r=eyJrIjoiOWFmMDczMTUtZGI3Yy00MTQxLTgyODYtYzE3YzFlOGRkNDcwIiwidCI6ImNlOTk3M2JmLTc4NDMtNDM2Zi1hYmZkLTk2MGQ0OTM1MTcxNiJ9
-
-Repository / Assets:  
+Repository:  
 https://github.com/ronit-kaushal/lyft-operations-analytics
 
 ---
